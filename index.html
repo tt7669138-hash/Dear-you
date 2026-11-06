@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080914">
+  <meta name="description" content="Дөнгөж танилцаж, чатлаж эхэлж буй бидний бяцхан орон зай.">
+  <title>Бидний бяцхан ертөнц ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div><div class="cursor-glow"></div>
+  <div class="intro-screen" id="introScreen">
+    <canvas id="starCanvas"></canvas>
+    <div class="intro-content">
+      <p class="eyebrow">Зүрх сэтгэлээсээ бичсэн бяцхан зурвас</p>
+      <div class="hero-heart intro-heart"><span>♥</span></div>
+      <h1>Би чамд зориулж<br><em>онцгой</em> зүйл бүтээлээ...</h1>
+      <p class="intro-copy">Дөнгөж танилцаж, бие биенээ бага багаар мэдэж эхэлж буй бидний бяцхан орон зай.</p>
+      <button class="primary-button" id="openUniverse">Ертөнцөө нээх <span>♥</span></button>
+    </div>
+    <div class="scroll-hint">доош гүйлгэж үзээрэй <span>↓</span></div>
+  </div>
+  <main id="mainContent" class="is-hidden">
+    <header class="site-header">
+      <a class="brand" href="#home"><span>♥</span> бидний бяцхан ертөнц</a>
+      <nav><a href="#letter">захидал</a><a href="#memories">дурсамж</a><a href="#reasons">шалтгаан</a></nav>
+      <a class="header-heart" href="#finale">♥</a>
+    </header>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal"><p class="eyebrow">Нэгдүгээр бүлэг · эхлэл</p><h2>Тавтай морил</h2><p class="hero-subtitle">Зарим хүнтэй ярилцах тусам илүү ихийг мэдэхийг хүсдэг.</p><a class="text-link" href="#letter">Үргэлжлүүлэн уншаарай <span>↗</span></a></div>
+      <div class="particle-heart-wrap reveal"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="particle-heart"><span>♥</span><i></i><i></i><i></i></div></div>
+      <div class="hero-footer"><span>01</span><span class="line"></span></div>
+    </section>
+    <section class="letter-section section-shell" id="letter">
+      <div class="section-heading reveal"><p class="eyebrow">Хоёрдугаар бүлэг · хэлэхийг хүссэн үгс</p><h2>Бяцхан зурвас,<br><em>зөвхөн чамд.</em></h2></div>
+      <div class="letter-layout">
+        <div class="envelope-area reveal"><button class="envelope" id="envelope" aria-label="Зурвасыг нээх"><span class="envelope-glow"></span><span class="envelope-back"></span><span class="envelope-paper"><strong>Дөнгөж танилцсан чамд</strong><small>нээхийн тулд товшино уу</small></span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="envelope-seal">♥</span></button><p class="hint" id="envelopeHint">Чамтай хуваалцахыг хүссэн хэдэн үг бий.</p></div>
+        <div class="letter-card reveal"><p class="letter-date">Шинэ танил · сайхан яриа</p><div class="letter-text" id="letterText"></div><p class="letter-signoff">Сайхан бүхнийг хүсье,<br><em>Батдорж</em> <span>♥</span></p></div>
+      </div>
+    </section>
+    <section class="memories-section section-shell" id="memories">
+      <div class="section-heading split-heading reveal"><div><p class="eyebrow">Гуравдугаар бүлэг · эхэлж буй мөчүүд</p><h2>Чиний тухай<br><em>мэдэх тусам сайхан.</em></h2></div><p class="heading-note">Дөнгөж танилцсан хүмүүсийн хоорондын хамгийн сайхан зүйл бол бие биенээ яаралгүй таньж мэдэх явдал.</p></div>
+      <div class="polaroid-grid">
+        <article class="polaroid polaroid-large reveal"><div class="photo photo-one"><img src="assets/girl-1.jfif" alt="Шинэ танилцлын дурсамж" style="width:100%;height:100%;object-fit:cover;display:block;"></div></article>
+        <article class="polaroid polaroid-top reveal"><div class="photo photo-two"><img src="assets/girl-2.jfif" alt="Сайхан яриа" style="width:100%;height:100%;object-fit:cover;display:block;"></div></article>
+        <article class="polaroid polaroid-bottom reveal"><div class="photo photo-three"><img src="assets/girl-3.jfif" alt="Шинэ дурсамж" style="width:100%;height:100%;object-fit:cover;display:block;"></div></article>
+      </div>
+    </section>
+    <section class="reasons-section section-shell" id="reasons">
+      <div class="section-heading centered reveal"><p class="eyebrow">Дөрөвдүгээр бүлэг · чамайг таних нь</p><h2>Чамтай дахин<br><em>яримаар санагддаг арван зүйл.</em></h2><p>Карт дээр дарж, өөрт таалагдсан зүйлсээ хараарай.</p></div>
+      <div class="reasons-grid">
+        <button class="reason-card reveal"><span class="reason-number">01</span><span class="reason-front">Чиний яриа</span><span class="reason-back">Чамтай ярилцах тусам илүү ихийг мэдэх хүсэл төрдөг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">02</span><span class="reason-front">Чиний хандлага</span><span class="reason-back">Энгийн зүйлсийг хүртэл сонирхолтой болгож чаддаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">03</span><span class="reason-front">Чиний сонирхол</span><span class="reason-back">Чиний дуртай зүйлсийн талаар сонсох сайхан байдаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">04</span><span class="reason-front">Чиний бодол</span><span class="reason-back">Юмсыг хэрхэн хардаг чинь надад сонирхолтой санагддаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">05</span><span class="reason-front">Чиний хөгжилтэй зан</span><span class="reason-back">Чатлах бүрд инээмсэглэх шалтгаан гарч ирдэг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">06</span><span class="reason-front">Чиний үнэнч байдал</span><span class="reason-back">Өөрөөрөө байж ярилцдаг нь сайхан санагддаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">07</span><span class="reason-front">Чиний тайван байдал</span><span class="reason-back">Яриа маань хэт сүртэй биш, тухтай байдаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">08</span><span class="reason-front">Чиний мөрөөдөл</span><span class="reason-back">Ирээдүйн тухай боддог зүйлсийг чинь мэдмээр санагддаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">09</span><span class="reason-front">Чиний асуултууд</span><span class="reason-back">Бие биенээ бага багаар танихад тусалдаг.</span></button>
+        <button class="reason-card reveal"><span class="reason-number">10</span><span class="reason-front">Дахин яримаар байдаг</span><span class="reason-back">Tанил ч гэсэн яриа маань дутуу үлдсэн мэт санагддаг.</span></button>
+      </div>
+    </section>
+    <section class="music-section section-shell"><div class="music-card reveal"><div class="vinyl"><div class="vinyl-label">♥</div></div><div class="music-info"><p class="eyebrow">Энэ дууг чамд</p><p>Дөнгөж эхэлж буй ярианд маань тохирох дуу.</p></div><div class="youtube-player"><iframe src="https://www.youtube.com/embed/iggmiF7DNoM?rel=0" title="Бидний дуу" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></section>
+    <section class="finale" id="finale"><canvas id="finaleCanvas"></canvas><div class="finale-content reveal"><div class="final-heart">♥</div><h2>Хамдаа<br><em>олон сайхан дурсамж бүтээе.</em></h2><p>Цаашдаа бие биенээ илүү сайн таньж, олон сонирхолтой зүйлсийн талаар ярилцъя.</p><div class="final-line"></div><span class="made-with-love">танилцсанд баяртай байна. <b>♥</b></span></div></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
